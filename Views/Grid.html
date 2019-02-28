@@ -1,125 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta property="og:title" content="ArronaGrid - Grid"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:description" content="Libreria sass para la maquetacion de sitios web"/>
-    <meta property="og:url" content="/Breackpoints.html"/>
-    <meta property="og:image" content="/Img/ArronaGrid.svg"/>
-    <meta property="og:site_name" content="ArronaGrid"/>
-    <meta property="og:locale" content="es_MX"/>
-    <meta property="twitter:card" content="summary_large_image"/>
-    <meta property="twitter:title" content="ArronaGrid - Grid"/>
-    <meta property="twitter:site" content=""/>
-    <meta property="twitter:description" content="Libreria sass para la maquetacion de sitios web"/>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <base href="http://localhost:3000/"/>
-    <link rel="stylesheet" href="css/Style.css"/>
-    <link rel="shortcut icon" type="image/x-icon" href="Img/ArronaGrid.ico" sizes="any"/>
-    <title>ArronaGrid - Grid</title>
-  </head>
-</html>
-<body>
-  <header class="header">
-    <input class="header-btnMenu" id="btnMenu" type="checkbox" name="btnMenu"/>
-    <label class="header-btnMenu-label" for="btnMenu"><img class="header-btnMenu-label-icon header-btnMenu-label-icon-menu" src="Img/Menu.svg" alt=""/><img class="header-btnMenu-label-icon header-btnMenu-label-icon-cross" src="Img/Cross.svg" alt=""/></label><a class="header-logo" href="Index.html"><img src="Img/ArronaGrid.svg" alt=""/>
-      <h1>ArronaGrid</h1></a>
-    <nav class="header-menu">
-      <ul>
-        <li class="header-menu-items"><a href="Index.html">Home</a></li>
-        <li class="header-menu-items"><a href="Views/Documentacion.html">Documentacion</a></li>
-        <li class="header-menu-items"><a href="Views/Changelog.html">Changelog</a></li>
-        <li class="header-menu-items"><a href="https://twitter.com/ArronaMontoya">Twitter</a></li>
-        <li class="header-menu-items"><a href="https://github.com/AndresArronaM/ArronaGrid">Github</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="main-config">
-        <div class="btn-content"><a class="btn btn-nav" href="Views/Flexbox.html"><img class="btn-nav-arrow" src="Img/Arrow_Left.svg" alt=""/>
-            <p class="btn-nav-ocultar">Anterior</p></a><a class="btn btn-nav" href="Views/Documentacion.html"><img class="btn-nav-home" src="Img/Home.svg" alt=""/>
-            <p class="btn-nav-ocultar">Volver al menu</p></a></div>
-    <section id="Grid">
-      <header>
-        <h2 class="main-config-title">Grid</h2>
-      </header>
-    </section>
-    <article>
-      <p>Mixin para la creacion de una cuadricula</p><i>para cambiar el numero de columnas tendra que cambiar el valor en la variable $Column</i>
-      <section>
-        <header>
-          <h3 class="main-config-title">Version sass</h3>
-        </header><pre><code class="language-scss">.MiBoton{
+<!DOCTYPE html><html lang="es"><head><meta property="og:title" content="ArronaGrid - Grid"/><meta property="og:type" content="website"/><meta property="og:description" content="Libreria sass para la maquetacion de sitios web"/><meta property="og:url" content="/Breackpoints.html"/><meta property="og:image" content="/Img/ArronaGrid.svg"/><meta property="og:site_name" content="ArronaGrid"/><meta property="og:locale" content="es_MX"/><meta property="twitter:card" content="summary_large_image"/><meta property="twitter:title" content="ArronaGrid - Grid"/><meta property="twitter:site" content=""/><meta property="twitter:description" content="Libreria sass para la maquetacion de sitios web"/><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="ie=edge"/><base href="https://arronagrid.github.io"/><link rel="stylesheet" href="css/Style.css"/><link rel="shortcut icon" type="image/x-icon" href="Img/ArronaGrid.ico" sizes="any"/><title>ArronaGrid - Grid</title></head></html><body><header class="header"><input class="header-btnMenu" id="btnMenu" type="checkbox" name="btnMenu"/><label class="header-btnMenu-label" for="btnMenu"><img class="header-btnMenu-label-icon header-btnMenu-label-icon-menu" src="Img/Menu.svg" alt=""/><img class="header-btnMenu-label-icon header-btnMenu-label-icon-cross" src="Img/Cross.svg" alt=""/></label><a class="header-logo" href="Index.html"><img src="Img/ArronaGrid.svg" alt=""/><h1>ArronaGrid</h1></a><nav class="header-menu"><ul><li class="header-menu-items"><a href="Index.html">Home</a></li><li class="header-menu-items"><a href="Views/Documentacion.html">Documentacion</a></li><li class="header-menu-items"><a href="Views/Changelog.html">Changelog</a></li><li class="header-menu-items"><a href="https://twitter.com/ArronaMontoya">Twitter</a></li><li class="header-menu-items"><a href="https://github.com/AndresArronaM/ArronaGrid">Github</a></li></ul></nav></header><main class="main-config"><div class="btn-content"><a class="btn btn-nav" href="Views/Flexbox.html"><img class="btn-nav-arrow" src="Img/Arrow_Left.svg" alt=""/><p class="btn-nav-ocultar">Anterior</p></a><a class="btn btn-nav" href="Views/Documentacion.html"><img class="btn-nav-home" src="Img/Home.svg" alt=""/><p class="btn-nav-ocultar">Volver al menu</p></a></div><section id="Grid"><header><h2 class="main-config-title">Grid</h2></header></section><article><p>Mixin para la creacion de una cuadricula</p><i>para cambiar el numero de columnas tendra que cambiar el valor en la variable $Column</i><section><header><h3 class="main-config-title">Version sass</h3></header><pre><code class="language-scss">.MiBoton{
     @include ag-Grid($Column);
 }
 </code></pre>
-
-      </section>
-      <section>
-        <header>
-          <h3 class="main-config-title">Version css</h3>
-        </header><pre><code class="language-html">&lt;p class=&quot;ag-Layout-Grid ag-Grid-xl&quot;&gt;&lt;/p&gt;
+</section><section><header><h3 class="main-config-title">Version css</h3></header><pre><code class="language-html">&lt;p class=&quot;ag-Layout-Grid ag-Grid-xl&quot;&gt;&lt;/p&gt;
 </code></pre>
-
-      </section>
-      <section>
-        <header>
-          <h3 class="main-config-title">Ejemplo</h3>
-        </header>
-        <section class="ag-content-grid">
-          <div class="ag-Button-sm color">div 1</div>
-          <div class="ag-Button-sm color">div 2</div>
-          <div class="ag-Button-sm color">div 3</div>
-          <div class="ag-Button-sm color">div 4</div>
-          <div class="ag-Button-sm color">div 5</div>
-          <div class="ag-Button-sm color">div 6</div>
-        </section>
-      </section>
-    </article>
-    <section id="Gap">
-      <header>
-        <h2 class="main-config-title">Gap</h2>
-      </header>
-    </section>
-    <article>
-      <p>Separacion de los Grid-Elements</p><i>para cambiar la separacion de los elementos tendra que cambiar el valor en la variable $Gap</i>
-      <section>
-        <header>
-          <h3 class="main-config-title">Version sass</h3>
-        </header><pre><code class="language-scss">.MiBoton{
+</section><section><header><h3 class="main-config-title">Ejemplo</h3></header><section class="ag-content-grid"><div class="ag-Button-sm color">div 1</div><div class="ag-Button-sm color">div 2</div><div class="ag-Button-sm color">div 3</div><div class="ag-Button-sm color">div 4</div><div class="ag-Button-sm color">div 5</div><div class="ag-Button-sm color">div 6</div></section></section></article><section id="Gap"><header><h2 class="main-config-title">Gap</h2></header></section><article><p>Separacion de los Grid-Elements</p><i>para cambiar la separacion de los elementos tendra que cambiar el valor en la variable $Gap</i><section><header><h3 class="main-config-title">Version sass</h3></header><pre><code class="language-scss">.MiBoton{
     @include ag-Gap($Gap);
 }
 </code></pre>
-
-      </section>
-      <section>
-        <header>
-          <h3 class="main-config-title">Version css</h3>
-        </header><pre><code class="language-html">&lt;p class=&quot;ag-Layout-Grid ag-Gap-xl&quot;&gt;&lt;/p&gt;
+</section><section><header><h3 class="main-config-title">Version css</h3></header><pre><code class="language-html">&lt;p class=&quot;ag-Layout-Grid ag-Gap-xl&quot;&gt;&lt;/p&gt;
 </code></pre>
-
-      </section>
-      <section>
-        <header>
-          <h3 class="main-config-title">Ejemplo</h3>
-        </header>
-        <section class="ag-content-grid ag-content-grid-gap">
-          <div class="ag-Button-sm color">div 1</div>
-          <div class="ag-Button-sm color">div 2</div>
-          <div class="ag-Button-sm color">div 3</div>
-          <div class="ag-Button-sm color">div 4</div>
-          <div class="ag-Button-sm color">div 5</div>
-          <div class="ag-Button-sm color">div 6</div>
-        </section>
-      </section>
-    </article>
-        <div class="btn-content"><a class="btn btn-nav" href="Views/Flexbox.html"><img class="btn-nav-arrow" src="Img/Arrow_Left.svg" alt=""/>
-            <p class="btn-nav-ocultar">Anterior</p></a><a class="btn btn-nav" href="Views/Documentacion.html"><img class="btn-nav-home" src="Img/Home.svg" alt=""/>
-            <p class="btn-nav-ocultar">Volver al menu</p></a></div>
-  </main>
-  <footer>
-    <p class="footer-copyright">ArronaGrid 2018-2019</p>
-  </footer>
-  <script src="JavaScript/Libreria/prism.js"></script>
-</body>
+</section><section><header><h3 class="main-config-title">Ejemplo</h3></header><section class="ag-content-grid ag-content-grid-gap"><div class="ag-Button-sm color">div 1</div><div class="ag-Button-sm color">div 2</div><div class="ag-Button-sm color">div 3</div><div class="ag-Button-sm color">div 4</div><div class="ag-Button-sm color">div 5</div><div class="ag-Button-sm color">div 6</div></section></section></article><div class="btn-content"><a class="btn btn-nav" href="Views/Flexbox.html"><img class="btn-nav-arrow" src="Img/Arrow_Left.svg" alt=""/><p class="btn-nav-ocultar">Anterior</p></a><a class="btn btn-nav" href="Views/Documentacion.html"><img class="btn-nav-home" src="Img/Home.svg" alt=""/><p class="btn-nav-ocultar">Volver al menu</p></a></div></main><footer><p class="footer-copyright">ArronaGrid 2018-2019</p></footer><script src="JavaScript/Libreria/prism.js"></script></body>
