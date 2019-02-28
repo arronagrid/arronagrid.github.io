@@ -1,1 +1,1 @@
-# arronagrid-arronagrid.github.io
+# arronagrid.github.io
