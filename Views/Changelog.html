@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta property="og:title" content="ArronaGrid - Changelog"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Libreria sass para la maquetacion de sitios web"/>
+    <meta property="og:url" content="/Changelog.html"/>
+    <meta property="og:image" content="/Img/ArronaGrid.svg"/>
+    <meta property="og:site_name" content="ArronaGrid"/>
+    <meta property="og:locale" content="es_MX"/>
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:title" content="ArronaGrid - Changelog"/>
+    <meta property="twitter:site" content=""/>
+    <meta property="twitter:description" content="Libreria sass para la maquetacion de sitios web"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <base href="http://localhost:3000/"/>
+    <link rel="stylesheet" href="css/Style.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="Img/ArronaGrid.ico" sizes="any"/>
+    <title>ArronaGrid - Changelog</title>
+  </head>
+</html>
+<body>
+  <header class="header">
+    <input class="header-btnMenu" id="btnMenu" type="checkbox" name="btnMenu"/>
+    <label class="header-btnMenu-label" for="btnMenu"><img class="header-btnMenu-label-icon header-btnMenu-label-icon-menu" src="Img/Menu.svg" alt=""/><img class="header-btnMenu-label-icon header-btnMenu-label-icon-cross" src="Img/Cross.svg" alt=""/></label><a class="header-logo" href="Index.html"><img src="Img/ArronaGrid.svg" alt=""/>
+      <h1>ArronaGrid</h1></a>
+    <nav class="header-menu">
+      <ul>
+        <li class="header-menu-items"><a href="Index.html">Home</a></li>
+        <li class="header-menu-items"><a href="Views/Documentacion.html">Documentacion</a></li>
+        <li class="header-menu-items"><a href="Views/Changelog.html">Changelog</a></li>
+        <li class="header-menu-items"><a href="https://twitter.com/ArronaMontoya">Twitter</a></li>
+        <li class="header-menu-items"><a href="https://github.com/AndresArronaM/ArronaGrid">Github</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-config"><h1>ArronaGrid</h1>
+<h2>V0.1.2-Beta</h2>
+<ul>
+<li>Se agrego el parametro <code>$Gap</code> en los mixin <code>Buttons()</code> y <code>ButtonsCss()</code>.</li>
+<li>Se Corrigio el error en el mixin <code>wrapCss()</code> el cual no generaba las clases css.</li>
+<li>Se Corrigio el error en el mixin <code>direccionCss()</code> el cual no interpolaba la variable $Direccion para clear las clases css.</li>
+<li>Se mejoro y se incluyo el mixin <code>gap()</code> en el <code>coreCss.scss</code> olvidado en versiones anteriores.</li>
+<li>Se mejoro los comentarios para explicar que hacen cada mixin.</li>
+<li>Se corrigio el error que compilaba el <code>coreCss</code> en vez del <code>coreSass</code></li>
+</ul>
+<h2>V0.1.3-Beta</h2>
+<ul>
+<li>Se cambio la propiedad <code>overflow</code> a <code>overflow-y</code>.</li>
+<li>Se corrigio y se mejoro el mixin <code>gridStrictCss()</code>.</li>
+</ul>
+<h2>V0.1.4-Beta</h2>
+<ul>
+<li>Correciones menores</li>
+<li>Se actualizo Autoprefixer</li>
+</ul>
+<h2>V0.1.5-Beta</h2>
+<ul>
+<li>
+<p>Renombracion de las clases css y Mixins sass</p>
+<ul>
+<li>_buttons.scss</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Mixin o Clase Modificado</th>
+<th>Nuevo Nombre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>button()</td>
+<td>ag-Button()</td>
+</tr>
+<tr>
+<td>radius()</td>
+<td>ag-Radius()</td>
+</tr>
+<tr>
+<td>buttonCss()</td>
+<td>ag-Button-css()</td>
+</tr>
+<tr>
+<td>.ag-button</td>
+<td>.ag-Button</td>
+</tr>
+<tr>
+<td>.ag-button-radius</td>
+<td>.ag-Button-Radius</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>_core.scss</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Mixin o Clase Modificado</th>
+<th>Nuevo Nombre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layout()</td>
+<td>ag-Layout()</td>
+</tr>
+<tr>
+<td>LayoutCss()</td>
+<td>ag-Layout-css()</td>
+</tr>
+<tr>
+<td>.#{$nameSpace}-layout-#{$Display}</td>
+<td>.#{$nameSpace}-Layout-#{$Display}</td>
+</tr>
+<tr>
+<td>container()</td>
+<td>ag-Container()</td>
+</tr>
+<tr>
+<td>containerCss()</td>
+<td>ag-Container-css()</td>
+</tr>
+<tr>
+<td>.#{$Container}-#{$Display}</td>
+<td>.#{$Container}-#{$Display}{</td>
+</tr>
+</tbody>
+</table>
+<p>Se modifico los valores que acepta los mixins Layout y LayoutCss <code>flex</code> y <code>grid</code> a <code>Flex</code> y <code>Grid</code> repespectivamente</p>
+<ul>
+<li>_flexbox.scss</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Mixin o Clase Modificado</th>
+<th>Nuevo Nombre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>direccion()</td>
+<td>ag-Direccion()</td>
+</tr>
+<tr>
+<td>direccionCss()</td>
+<td>ag-Direccion-css()</td>
+</tr>
+<tr>
+<td>.#{$Breackpoint}-flex-#{$Direccion}</td>
+<td>.#{$nameSpace}-Flex-#{$Direccion}-#{$Breackpoint}</td>
+</tr>
+<tr>
+<td>wrap()</td>
+<td>ag-Wrap()</td>
+</tr>
+<tr>
+<td>.#{$Breackpoint}-flex-#{$Wrap}</td>
+<td>.#{$nameSpace}-Flex-#{$Wrap}-#{$Breackpoint}</td>
+</tr>
+<tr>
+<td>Align()</td>
+<td>ag-Align()</td>
+</tr>
+<tr>
+<td>Align()Css</td>
+<td>ag-Align-css()</td>
+</tr>
+<tr>
+<td>.#{$Breackpoint}-#{$Axis}-#{$Align}</td>
+<td>.#{$nameSpace}-#{$Axis}-#{$Align}-#{$Breackpoint}</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>_grid.scss</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Mixin o Clase Modificado</th>
+<th>Nuevo Nombre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gridStrict()</td>
+<td>ag-Grid()</td>
+</tr>
+<tr>
+<td>gridStrictCss()</td>
+<td>ag-Grid-css()</td>
+</tr>
+<tr>
+<td>gap()</td>
+<td>ag-Gap()</td>
+</tr>
+<tr>
+<td>gapCss()</td>
+<td>ag-Gap-Css()</td>
+</tr>
+<tr>
+<td>.xs-gap</td>
+<td>.ag-Gap-xs</td>
+</tr>
+<tr>
+<td>.s-gap</td>
+<td>.ag-Gap-s</td>
+</tr>
+<tr>
+<td>.m-gap</td>
+<td>.ag-Gap-m</td>
+</tr>
+<tr>
+<td>.st-gap</td>
+<td>.ag-Gap-st</td>
+</tr>
+<tr>
+<td>.t-gap</td>
+<td>.ag-Gap-t</td>
+</tr>
+<tr>
+<td>.l-gap</td>
+<td>.ag-Gap-l</td>
+</tr>
+<tr>
+<td>.xl-gap</td>
+<td>.ag-Gap-xl</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>_helps.scss</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Mixin o Clase Modificado</th>
+<th>Nuevo Nombre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fullLayoutCss()</td>
+<td>ag-Full-Layout-css()</td>
+</tr>
+<tr>
+<td>.Full-Layout</td>
+<td>.ag-Full-Layout</td>
+</tr>
+<tr>
+<td>fullCss()</td>
+<td>ag-Full-css</td>
+</tr>
+<tr>
+<td>.Full</td>
+<td>.ag-Full</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+
+  </main>
+  <footer>
+    <p class="footer-copyright">ArronaGrid 2018-2019</p>
+  </footer>
+  <script src="JavaScript/Libreria/prism.js"></script>
+</body>

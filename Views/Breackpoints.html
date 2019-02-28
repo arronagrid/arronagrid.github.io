@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta property="og:title" content="ArronaGrid - Breackpoints"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Libreria sass para la maquetacion de sitios web"/>
+    <meta property="og:url" content="/Breackpoints.html"/>
+    <meta property="og:image" content="/Img/ArronaGrid.svg"/>
+    <meta property="og:site_name" content="ArronaGrid"/>
+    <meta property="og:locale" content="es_MX"/>
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:title" content="ArronaGrid - Breackpoints"/>
+    <meta property="twitter:site" content=""/>
+    <meta property="twitter:description" content="Libreria sass para la maquetacion de sitios web"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <base href="http://localhost:3000/"/>
+    <link rel="stylesheet" href="css/Style.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="Img/ArronaGrid.ico" sizes="any"/>
+    <title>ArronaGrid - Breackpoints</title>
+  </head>
+</html>
+<body>
+  <header class="header">
+    <input class="header-btnMenu" id="btnMenu" type="checkbox" name="btnMenu"/>
+    <label class="header-btnMenu-label" for="btnMenu"><img class="header-btnMenu-label-icon header-btnMenu-label-icon-menu" src="Img/Menu.svg" alt=""/><img class="header-btnMenu-label-icon header-btnMenu-label-icon-cross" src="Img/Cross.svg" alt=""/></label><a class="header-logo" href="Index.html"><img src="Img/ArronaGrid.svg" alt=""/>
+      <h1>ArronaGrid</h1></a>
+    <nav class="header-menu">
+      <ul>
+        <li class="header-menu-items"><a href="Index.html">Home</a></li>
+        <li class="header-menu-items"><a href="Views/Documentacion.html">Documentacion</a></li>
+        <li class="header-menu-items"><a href="Views/Changelog.html">Changelog</a></li>
+        <li class="header-menu-items"><a href="https://twitter.com/ArronaMontoya">Twitter</a></li>
+        <li class="header-menu-items"><a href="https://github.com/AndresArronaM/ArronaGrid">Github</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-config">
+        <div class="btn-content"><a class="btn btn-nav" href="Views/Base.html"><img class="btn-nav-arrow" src="Img/Arrow_Left.svg" alt=""/>
+            <p class="btn-nav-ocultar">Anterior</p></a><a class="btn btn-nav" href="Views/Documentacion.html"><img class="btn-nav-home" src="Img/Home.svg" alt=""/>
+            <p class="btn-nav-ocultar">Volver al menu</p></a><a class="btn btn-nav" href="Views/Button.html"><img class="btn-nav-arrow" src="Img/Arrow_Right.svg" alt=""/>
+            <p class="btn-nav-ocultar">Siguiente</p></a></div>
+    <section>
+      <header>
+        <h2 class="main-config-title">Breakpoints</h2>
+      </header>
+      <p></p>Los Breackpoints son los puntos de ruptura de tu diseño cuando el espacio disponible del viewport es superado por tu layout
+      Estos puntos de ruptura estan definidos en un mapa de Sass en el archivo principal de ArronaGrid (ArronaGrid.scss)<pre><code class="language-scss">$Breackpoints : (
+    xs: 240px,
+    s:  320px,
+    m:  480px,
+    st: 600px,
+    t:  768px,
+    l:  1024px,
+    xl: 1200px
+)   !default;
+</code></pre>
+
+      <p></p>Si es un usuario avanzado en Sass puedes modificar los breackpoints deacuerdo a las nesecidades de su proyecto.
+      Solo debes de declarar todo el mapa Sass $Breackpoint antes de importar ArronaGrid.<pre><code class="language-scss">$Breackpoints : (
+    Extra_Chico : 240px,
+    Chico       : 320px,
+    Mediano     : 480px,
+    Simi-Tablet : 600px,
+    Tablet      : 768px,
+    Largo       : 1024px,
+    Extra_Largo : 1200px
+)   !default;
+
+// importar ArronaGrid
+
+// Si usa Prepros
+@import &quot;node_modules/@andresarronamontoya/arronagrid/ArronaGrid.scss&quot;;
+
+// Si usa Gulp.js
+@import &quot;~@andresarronamontoya/arronagrid/ArronaGrid.scss&quot;;
+</code></pre>
+
+      <article id="MF">
+        <header>
+          <h3 class="main-config-title">Mobile First</h3>
+        </header>
+        <p></p>ArronaGrid usa la filosofia de Mobile First lo que significa que para maquetar tus sitios web primero deberas de empezar desde un celular hasta llegar a una PC
+        Ejemplo<pre><code class="language-html">// Creamos un contenedor flexbox con un flex-direccion:column en dispositivos cullo viewport 240px en adelantes
+&lt;article class=&quot;ag-Layout-Flex ag-Flex-c-xs&quot;&gt;&lt;/article&gt;
+
+// Con la clase ag-Flex-r-xl cambiamos el valor de flex-direccion de column a row solo en dispositivos cullo viewport sea 1200px o superior
+&lt;article class=&quot;ag-Layout-Flex ag-Flex-c-xs ag-Flex-r-xl&quot;&gt;&lt;/article&gt;
+</code></pre>
+
+      </article>
+      <article id="MQ">
+        <header>
+          <h3 class="main-config-title">Media Querys</h3>
+        </header>
+        <p></p>ArronaGrid incluye un mixin para la creacion de media querys unicamente tienen que pasar el valor del breackpoint
+        Ejemplo<pre><code class="language-scss">.hola_mundo{
+    color:red;
+    @include MediaQuery(s){
+        color:blue;
+    }
+}
+
+// Compila a esto
+
+.hola_mundo{
+    color:red;
+}
+
+@media screen and (min-width:320px){
+    .hola_mundo{
+        color:blue;
+    }
+}
+</code></pre>
+
+      </article>
+    </section>
+        <div class="btn-content"><a class="btn btn-nav" href="Views/Base.html"><img class="btn-nav-arrow" src="Img/Arrow_Left.svg" alt=""/>
+            <p class="btn-nav-ocultar">Anterior</p></a><a class="btn btn-nav" href="Views/Documentacion.html"><img class="btn-nav-home" src="Img/Home.svg" alt=""/>
+            <p class="btn-nav-ocultar">Volver al menu</p></a><a class="btn btn-nav" href="Views/Button.html"><img class="btn-nav-arrow" src="Img/Arrow_Right.svg" alt=""/>
+            <p class="btn-nav-ocultar">Siguiente</p></a></div>
+  </main>
+  <footer>
+    <p class="footer-copyright">ArronaGrid 2018-2019</p>
+  </footer>
+  <script src="JavaScript/Libreria/prism.js"></script>
+</body>

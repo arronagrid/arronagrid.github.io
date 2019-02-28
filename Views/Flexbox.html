@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta property="og:title" content="ArronaGrid - Flexbox"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Libreria sass para la maquetacion de sitios web"/>
+    <meta property="og:url" content="/Breackpoints.html"/>
+    <meta property="og:image" content="/Img/ArronaGrid.svg"/>
+    <meta property="og:site_name" content="ArronaGrid"/>
+    <meta property="og:locale" content="es_MX"/>
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:title" content="ArronaGrid - Flexbox"/>
+    <meta property="twitter:site" content=""/>
+    <meta property="twitter:description" content="Libreria sass para la maquetacion de sitios web"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <base href="http://localhost:3000/"/>
+    <link rel="stylesheet" href="css/Style.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="Img/ArronaGrid.ico" sizes="any"/>
+    <title>ArronaGrid - Flexbox</title>
+  </head>
+</html>
+<body>
+  <header class="header">
+    <input class="header-btnMenu" id="btnMenu" type="checkbox" name="btnMenu"/>
+    <label class="header-btnMenu-label" for="btnMenu"><img class="header-btnMenu-label-icon header-btnMenu-label-icon-menu" src="Img/Menu.svg" alt=""/><img class="header-btnMenu-label-icon header-btnMenu-label-icon-cross" src="Img/Cross.svg" alt=""/></label><a class="header-logo" href="Index.html"><img src="Img/ArronaGrid.svg" alt=""/>
+      <h1>ArronaGrid</h1></a>
+    <nav class="header-menu">
+      <ul>
+        <li class="header-menu-items"><a href="Index.html">Home</a></li>
+        <li class="header-menu-items"><a href="Views/Documentacion.html">Documentacion</a></li>
+        <li class="header-menu-items"><a href="Views/Changelog.html">Changelog</a></li>
+        <li class="header-menu-items"><a href="https://twitter.com/ArronaMontoya">Twitter</a></li>
+        <li class="header-menu-items"><a href="https://github.com/AndresArronaM/ArronaGrid">Github</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-config">
+        <div class="btn-content"><a class="btn btn-nav" href="Views/Button.html"><img class="btn-nav-arrow" src="Img/Arrow_Left.svg" alt=""/>
+            <p class="btn-nav-ocultar">Anterior</p></a><a class="btn btn-nav" href="Views/Documentacion.html"><img class="btn-nav-home" src="Img/Home.svg" alt=""/>
+            <p class="btn-nav-ocultar">Volver al menu</p></a><a class="btn btn-nav" href="Views/Grid.html"><img class="btn-nav-arrow" src="Img/Arrow_Right.svg" alt=""/>
+            <p class="btn-nav-ocultar">Siguiente</p></a></div>
+    <section>
+      <header>
+        <h2 class="main-config-title">Flexbox</h2>
+      </header>
+      <article>
+        <header>
+          <h3 class="main-config-title">Direccion</h3>
+        </header>
+        <p>Con ArronaGrid usted puede alinear sus elementos o su contenido ya sea de manera horizontal , de manea vertical  o de manera inversa segun el breackpoint</p>
+        <section>
+          <header>
+            <h4 class="main-config-title">Column</h4>
+          </header>
+          <section>
+            <header>
+              <h5 class="main-config-title">Version Sass</h5>
+            </header><pre><code class="language-scss">.Container{
+    @include ag-Direccion(c);
+}
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h5 class="main-config-title">Version css</h5>
+            </header><pre><code class="language-html">&lt;article class=&quot;ag-Layout-Flex ag-Flex-c-xl&quot;&gt;&lt;/article&gt;
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h5 class="main-config-title">Ejemplo</h5>
+            </header>
+            <section class="ag-content ag-content-c">
+              <div class="ag-Button ag-Button-xl color">div1</div>
+              <div class="ag-Button ag-Button-xl color">div2</div>
+              <div class="ag-Button ag-Button-xl color">div3</div>
+            </section>
+          </section>
+        </section>
+        <section>
+          <header>
+            <h4 class="main-config-title">Column Reverse</h4>
+          </header>
+          <section>
+            <header>
+              <h5 class="main-config-title">Version Sass</h5>
+            </header><pre><code class="language-scss">.Container{
+    @include ag-Direccion(cr);
+}
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h5 class="main-config-title">Version css</h5>
+            </header><pre><code class="language-html">&lt;article class=&quot;ag-Layout-Flex ag-Flex-cr-xl&quot;&gt;&lt;/article&gt;
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h5 class="main-config-title">Ejemplo</h5>
+            </header>
+            <section class="ag-content ag-content-cr">
+              <div class="ag-Button ag-Button-xl color">div1</div>
+              <div class="ag-Button ag-Button-xl color">div2</div>
+              <div class="ag-Button ag-Button-xl color">div3</div>
+            </section>
+          </section>
+        </section>
+        <section>
+          <header>
+            <h4 class="main-config-title">Row</h4>
+          </header>
+          <section>
+            <header>
+              <h5 class="main-config-title">Version Sass</h5>
+            </header><pre><code class="language-scss">.Container{
+    @include ag-Direccion(r);
+}
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h5 class="main-config-title">Version css</h5>
+            </header><pre><code class="language-html">&lt;article class=&quot;ag-Layout-Flex ag-Flex-r-xl&quot;&gt;&lt;/article&gt;
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h5 class="main-config-title">Ejemplo</h5>
+            </header>
+            <section class="ag-content ag-content-r">
+              <div class="ag-Button ag-Button-xl color">div1</div>
+              <div class="ag-Button ag-Button-xl color">div2</div>
+              <div class="ag-Button ag-Button-xl color">div3</div>
+            </section>
+          </section>
+        </section>
+        <section>
+          <header>
+            <h4 class="main-config-title">Row Reverse</h4>
+          </header>
+          <section>
+            <header>
+              <h5 class="main-config-title">Version Sass</h5>
+            </header><pre><code class="language-scss">.Container{
+    @include ag-Direccion(rr);
+}
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h5 class="main-config-title">Version css</h5>
+            </header><pre><code class="language-html">&lt;article class=&quot;ag-Layout-Flex ag-Flex-rr-xl&quot;&gt;&lt;/article&gt;
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h5 class="main-config-title">Ejemplo</h5>
+            </header>
+            <section class="ag-content ag-content-rr">
+              <div class="ag-Button ag-Button-xl color">div1</div>
+              <div class="ag-Button ag-Button-xl color">div2</div>
+              <div class="ag-Button ag-Button-xl color">div3</div>
+            </section>
+          </section>
+        </section>
+      </article>
+      <article>
+        <header>
+          <h3 class="main-config-title">Wrap</h3>
+        </header>
+        <p>Con ArronaGrid usted decide si sus elementos o su contenido quedan en una sola linea,inversa o en multiples lineas segun el breackpoint</p>
+        <section>
+          <header>
+            <h4 class="main-config-title">Wrap</h4>
+          </header>
+          <section>
+            <header>
+              <h5 class="main-config-title">Version Sass</h5>
+            </header><pre><code class="language-scss">.Container{
+    @include ag-Wrap(w);
+}
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h5 class="main-config-title">Version css</h5>
+            </header><pre><code class="language-html">&lt;article class=&quot;ag-Layout-Flex ag-Flex-w-xl&quot;&gt;&lt;/article&gt;
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h5 class="main-config-title">Ejemplo</h5>
+            </header>
+            <section class="ag-content ag-content-w">
+              <div class="ag-Button ag-Button-x color">div1</div>
+              <div class="ag-Button ag-Button-x color">div2</div>
+              <div class="ag-Button ag-Button-x color">div3</div>
+            </section>
+          </section>
+        </section>
+        <section>
+          <header>
+            <h4 class="main-config-title">Wrap Reverse</h4>
+          </header>
+          <section>
+            <header>
+              <h5 class="main-config-title">Version Sass</h5>
+            </header><pre><code class="language-scss">.Container{
+    @include ag-Wrap(wr);
+}
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h5 class="main-config-title">Version css</h5>
+            </header><pre><code class="language-html">&lt;article class=&quot;ag-Layout-Flex ag-Flex-wr-xl&quot;&gt;&lt;/article&gt;
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h5 class="main-config-title">Ejemplo</h5>
+            </header>
+            <section class="ag-content ag-content-wr">
+              <div class="ag-Button ag-Button-x color">div1</div>
+              <div class="ag-Button ag-Button-x color">div2</div>
+              <div class="ag-Button ag-Button-x color">div3</div>
+            </section>
+          </section>
+        </section>
+        <section>
+          <header>
+            <h4 class="main-config-title">Nowrap</h4>
+          </header>
+          <section>
+            <header>
+              <h5 class="main-config-title">Version Sass</h5>
+            </header><pre><code class="language-scss">.Container{
+    @include ag-Wrap(nw);
+}
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h5 class="main-config-title">Version css</h5>
+            </header><pre><code class="language-html">&lt;article class=&quot;ag-Layout-Flex ag-Flex-nw-xl&quot;&gt;&lt;/article&gt;
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h5 class="main-config-title">Ejemplo</h5>
+            </header>
+            <section class="ag-content ag-content-nw">
+              <div class="ag-Button ag-Button-x color">div1</div>
+              <div class="ag-Button ag-Button-x color">div2</div>
+              <div class="ag-Button ag-Button-x color">div3</div>
+            </section>
+          </section>
+        </section>
+      </article>
+      <article>
+        <header>
+          <h3 class="main-config-title">Align</h3>
+          <p>Con ArronaGrid usted puede centrar, distribuir o alinear sus elementos o su contenido segun el breackpoint</p>
+        </header>
+        <section>
+          <header>
+            <h4 class="main-config-title">Alinear</h4>
+          </header>
+        </section>
+        <section>
+          <header>
+            <h5 class="main-config-title">Start</h5>
+          </header>
+          <section>
+            <header>
+              <h6 class="main-config-title">Version Sass</h6>
+            </header><pre><code class="language-scss">.Container{
+    @include ag-Align(cross,Start);
+}
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h6 class="main-config-title">Version css</h6>
+            </header><pre><code class="language-html">&lt;article class=&quot;ag-Layout-Flex ag-Cross-Start-xl&quot;&gt;&lt;/article&gt;
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h6 class="main-config-title">Ejemplo</h6>
+            </header>
+            <section class="ag-content ag-content-cs">
+              <div class="ag-Button ag-Button-xl color">div1</div>
+              <div class="ag-Button ag-Button-xl color">div2</div>
+              <div class="ag-Button ag-Button-xl color">div3</div>
+            </section>
+          </section>
+        </section>
+        <section>
+          <header>
+            <h5 class="main-config-title">Center</h5>
+          </header>
+          <section>
+            <header>
+              <h6 class="main-config-title">Version Sass</h6>
+            </header><pre><code class="language-scss">.Container{
+    @include ag-Align(cross,Center);
+}
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h6 class="main-config-title">Version css</h6>
+            </header><pre><code class="language-html">&lt;article class=&quot;ag-Layout-Flex ag-Cross-Center-xl&quot;&gt;&lt;/article&gt;
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h6 class="main-config-title">Ejemplo</h6>
+            </header>
+            <section class="ag-content ag-content-cc">
+              <div class="ag-Button ag-Button-xl color">div1</div>
+              <div class="ag-Button ag-Button-xl color">div2</div>
+              <div class="ag-Button ag-Button-xl color">div3</div>
+            </section>
+          </section>
+        </section>
+        <section>
+          <header>
+            <h5 class="main-config-title">End</h5>
+          </header>
+          <section>
+            <header>
+              <h6 class="main-config-title">Version Sass</h6>
+            </header><pre><code class="language-scss">.Container{
+    @include ag-Align(cross,End);
+}
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h6 class="main-config-title">Version css</h6>
+            </header><pre><code class="language-html">&lt;article class=&quot;ag-Layout-Flex ag-Cross-End-xl&quot;&gt;&lt;/article&gt;
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h6 class="main-config-title">Ejemplo</h6>
+            </header>
+            <section class="ag-content ag-content-ce">
+              <div class="ag-Button ag-Button-xl color">div1</div>
+              <div class="ag-Button ag-Button-xl color">div2</div>
+              <div class="ag-Button ag-Button-xl color">div3</div>
+            </section>
+          </section>
+        </section>
+        <section>
+          <header>
+            <h4 class="main-config-title">Distribuir</h4>
+          </header>
+        </section>
+        <section>
+          <header>
+            <h5 class="main-config-title">Start</h5>
+          </header>
+          <section>
+            <header>
+              <h6 class="main-config-title">Version Sass</h6>
+            </header><pre><code class="language-scss">.Container{
+    @include ag-Align(main,Start);
+}
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h6 class="main-config-title">Version css</h6>
+            </header><pre><code class="language-html">&lt;article class=&quot;ag-Layout-Flex ag-Main-Start-xl&quot;&gt;&lt;/article&gt;
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h6 class="main-config-title">Ejemplo</h6>
+            </header>
+            <section class="ag-content ag-content-ms">
+              <div class="ag-Button ag-Button-xl color">div1</div>
+              <div class="ag-Button ag-Button-xl color">div2</div>
+              <div class="ag-Button ag-Button-xl color">div3</div>
+            </section>
+          </section>
+        </section>
+        <section>
+          <header>
+            <h5 class="main-config-title">Center</h5>
+          </header>
+          <section></section>
+          <section>
+            <header>
+              <h6 class="main-config-title">Version Sass</h6>
+            </header><pre><code class="language-scss">.Container{
+    @include ag-Align(main,Center);
+}
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h6 class="main-config-title">Version css</h6>
+            </header><pre><code class="language-html">&lt;article class=&quot;ag-Layout-Flex ag-Main-Center-xl&quot;&gt;&lt;/article&gt;
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h6 class="main-config-title">Ejemplo</h6>
+            </header>
+            <section class="ag-content ag-content-mc">
+              <div class="ag-Button ag-Button-xl color">div1</div>
+              <div class="ag-Button ag-Button-xl color">div2</div>
+              <div class="ag-Button ag-Button-xl color">div3</div>
+            </section>
+          </section>
+        </section>
+        <section>
+          <header>
+            <h5 class="main-config-title">End</h5>
+          </header>
+          <section>
+            <header>
+              <h6 class="main-config-title">Version Sass</h6>
+            </header><pre><code class="language-scss">.Container{
+    @include ag-Align(main,End);
+}
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h6 class="main-config-title">Version css</h6>
+            </header><pre><code class="language-html">&lt;article class=&quot;ag-Layout-Flex ag-Main-End-xl&quot;&gt;&lt;/article&gt;
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h6 class="main-config-title">Ejemplo</h6>
+            </header>
+            <section class="ag-content ag-content-me">
+              <div class="ag-Button ag-Button-xl color">div1</div>
+              <div class="ag-Button ag-Button-xl color">div2</div>
+              <div class="ag-Button ag-Button-xl color">div3</div>
+            </section>
+          </section>
+        </section>
+        <section>
+          <header>
+            <h5 class="main-config-title">Justify</h5>
+          </header>
+          <section>
+            <header>
+              <h6 class="main-config-title">Version Sass</h6>
+            </header><pre><code class="language-scss">.Container{
+    @include ag-Align(main,Justify);
+}
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h6 class="main-config-title">Version css</h6>
+            </header><pre><code class="language-html">&lt;article class=&quot;ag-Layout-Flex ag-Main-Justify-xl&quot;&gt;&lt;/article&gt;
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h6 class="main-config-title">Ejemplo</h6>
+            </header>
+            <section class="ag-content ag-content-mj">
+              <div class="ag-Button ag-Button-xl color">div1</div>
+              <div class="ag-Button ag-Button-xl color">div2</div>
+              <div class="ag-Button ag-Button-xl color">div3</div>
+            </section>
+          </section>
+        </section>
+        <section>
+          <header>
+            <h5 class="main-config-title">Distribute</h5>
+          </header>
+          <section>
+            <header>
+              <h6 class="main-config-title">Version Sass</h6>
+            </header><pre><code class="language-scss">.Container{
+    @include ag-Align(main,Distribute);
+}
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h6 class="main-config-title">Version css</h6>
+            </header><pre><code class="language-html">&lt;article class=&quot;ag-Layout-Flex ag-Main-Distribute-xl&quot;&gt;&lt;/article&gt;
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h6 class="main-config-title">Ejemplo</h6>
+            </header>
+            <section class="ag-content ag-content-md">
+              <div class="ag-Button ag-Button-xl color">div1</div>
+              <div class="ag-Button ag-Button-xl color">div2</div>
+              <div class="ag-Button ag-Button-xl color">div3</div>
+            </section>
+          </section>
+        </section>
+        <section>
+          <header>
+            <h4 class="main-config-title">Centrado Perfecto</h4>
+          </header>
+          <section>
+            <header>
+              <h5 class="main-config-title">Version Sass</h5>
+            </header><pre><code class="language-scss">.Container{
+    @include ag-Align(axis,Start);
+}
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h5 class="main-config-title">Version css</h5>
+            </header><pre><code class="language-html">&lt;article class=&quot;ag-Layout-Flex ag-Axis-Center-xl&quot;&gt;&lt;/article&gt;
+</code></pre>
+
+          </section>
+          <section>
+            <header>
+              <h5 class="main-config-title">Ejemplo</h5>
+            </header>
+            <section class="ag-content ag-content-ac">
+              <div class="ag-Button ag-Button-xl color">div1</div>
+              <div class="ag-Button ag-Button-xl color">div2</div>
+              <div class="ag-Button ag-Button-xl color">div3</div>
+            </section>
+          </section>
+        </section>
+      </article>
+    </section>
+        <div class="btn-content"><a class="btn btn-nav" href="Views/Button.html"><img class="btn-nav-arrow" src="Img/Arrow_Left.svg" alt=""/>
+            <p class="btn-nav-ocultar">Anterior</p></a><a class="btn btn-nav" href="Views/Documentacion.html"><img class="btn-nav-home" src="Img/Home.svg" alt=""/>
+            <p class="btn-nav-ocultar">Volver al menu</p></a><a class="btn btn-nav" href="Views/Grid.html"><img class="btn-nav-arrow" src="Img/Arrow_Right.svg" alt=""/>
+            <p class="btn-nav-ocultar">Siguiente</p></a></div>
+  </main>
+  <footer>
+    <p class="footer-copyright">ArronaGrid 2018-2019</p>
+  </footer>
+  <script src="JavaScript/Libreria/prism.js"></script>
+</body>
